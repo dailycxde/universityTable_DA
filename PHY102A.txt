@@ -1,4 +1,0 @@
-PHY102A 
-Day: TUESDAY Time: 14:30-15:30 - Location: EZ 0 D06
-Day: THURSDAY Time: 11:30-12:30 - Location: VT 1 D01
-Day: THURSDAY Time: 12:30-13:30 - Location: VT 2 D05
