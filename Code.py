@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 df = pd.read_excel("tt.xlsx")
 df = df.fillna("missing")
@@ -19,8 +20,12 @@ def handleTable(course: str) -> "excel_sheet":
     if len(location) == 0:
         return "course does not exist"
     
+
+    def rem(text):
+        return re.sub(r'[^a-zA-Z0-9\s]', '', text)
+
     day = [i.split()[1][1:-1] for i in day]
-    location = [i[-9:-1] for i in location]
+    location = [rem(i) for i in location]
     
     with open(f"{course}.txt", "w") as file:
         file.write(f"{course} \n")
